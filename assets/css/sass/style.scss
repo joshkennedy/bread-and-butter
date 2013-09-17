@@ -1,0 +1,32 @@
+///////////////////////////////////////
+// Colors
+///////////////////////////////////////
+
+  $base:              #FAFAFA;
+  $text:              #313032;
+  $primary:           #16A8CC;
+  $primary-dark:      mix($primary, black, 80%);
+  $primary-light:     mix($primary, white, 80%);
+  $secondary:         #de555a;
+  $secondary-dark:    mix($secondary, black, 85%);
+  $secondary-light:   mix($secondary, white, 85%);
+  $gray:              #D9D9DC;
+  $gray-dark:         mix($gray, black, 85%);
+  $gray-light:        mix($gray, white, 85%);
+
+
+///////////////////////////////////////
+// Imports
+///////////////////////////////////////
+
+@import "reset", "layout", "mixins", "typography";
+
+
+///////////////////////////////////////
+// Global Styles
+///////////////////////////////////////
+
+body {
+  background: $base;
+  color: $text;
+}

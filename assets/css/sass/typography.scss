@@ -1,0 +1,83 @@
+///////////////////////////////////////
+// Typography
+///////////////////////////////////////
+
+// Adapted from Jason Weaver's TYPOGRAPHY AND MODULAR SCALES WITH SASS 
+// http://jasonweaver.name/blog/typography-and-modular-scales-with-sass/
+
+// Variables
+$type-ratio: 1.25;
+$squared: $type-ratio * $type-ratio;
+$cubed:   $type-ratio * $type-ratio * $type-ratio;
+$quartic: $type-ratio * $type-ratio * $type-ratio * $type-ratio;
+$font-size: 1rem; // 16px
+$font-size-px: 16px;
+$line-height: $type-ratio;
+$type-margin-bottom: $font-size * $squared;
+
+// Sweet heavenly glory
+@mixin heading($level) {
+  @if $level == 6 { // 1.25rem | 20px
+    font-size: $font-size-px * $type-ratio;
+    font-size: $font-size * $type-ratio;
+  }
+  @if $level == 5 { // 25px | 1.5625rem
+    font-size: ($font-size-px * $squared);
+    font-size: ($font-size * $squared);
+  }
+  @if $level == 4 { // 31.25px | 1.95313rem
+    font-size: ($font-size-px * $cubed);
+    font-size: ($font-size * $cubed);
+  } 
+  @if $level == 3 { // 39.0625px | 2.44141rem
+    font-size: ($font-size-px * $quartic);
+    font-size: ($font-size * $quartic);
+  }
+  @if $level == 2 { // 48.82813px | 3.05176rem
+    font-size: ($font-size-px * $squared * $cubed);
+    font-size: ($font-size * $squared * $cubed);
+  }
+  @if $level == 1 { // 61.03516px | 3.8147rem
+    font-size: ($font-size-px * $cubed * $cubed);
+    font-size: ($font-size * $cubed * $cubed);
+  }
+}
+
+body {
+  font: normal 100%/1.4 Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  @include transition(color 200ms ease-in);
+  &:hover {
+    color: $primary-light;
+    @include transition(color 200ms ease-out);
+  }
+}
+
+p {
+  font-size: $font-size-px;
+  font-size: $font-size;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $type-margin-bottom;
+  line-height: $line-height;
+}
+
+h1 { @include heading(1); }
+h2 { @include heading(2); }
+h3 { @include heading(3); }
+h4 { @include heading(4); }
+h5 { @include heading(5); }
+h6 { @include heading(6); }

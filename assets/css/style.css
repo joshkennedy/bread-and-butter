@@ -1,0 +1,223 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+strong, b, mark {
+  font-weight: bold;
+  font-style: inherit;
+}
+
+em, i, cite, q, address, dfn, var {
+  font-style: italic;
+  font-weight: inherit;
+}
+
+abbr[title], dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+
+ins {
+  border-bottom: 1px solid;
+}
+
+a, u, ins {
+  text-decoration: none;
+}
+
+del, s {
+  text-decoration: line-through;
+}
+
+pre, code, samp, kbd {
+  font-family: monospace;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+img {
+  border: none;
+  font-style: italic;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@-webkit-viewport {
+  width: device-width;
+}
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  min-width: 640px;
+  max-width: 760px;
+  *zoom: 1;
+}
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+
+.content {
+  float: left;
+  width: 46.875%;
+  min-width: 300px;
+}
+.content + .content {
+  float: right;
+}
+
+@media only screen and (max-width: 719px) {
+  .container {
+    min-width: 100px;
+    width: 88.88%;
+  }
+
+  .content {
+    float: none;
+    min-width: 100px;
+    width: 100%;
+  }
+}
+body {
+  font: normal 100%/1.4 Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a {
+  color: #16a8cc;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease-in;
+  -moz-transition: color 200ms ease-in;
+  -o-transition: color 200ms ease-in;
+  transition: color 200ms ease-in;
+  -webkit-backface-visibility: hidden;
+}
+a:hover {
+  color: #44b9d6;
+  -webkit-transition: color 200ms ease-out;
+  -moz-transition: color 200ms ease-out;
+  -o-transition: color 200ms ease-out;
+  transition: color 200ms ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.5625rem;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 61.03516px;
+  font-size: 3.8147rem;
+}
+
+h2 {
+  font-size: 48.82813px;
+  font-size: 3.05176rem;
+}
+
+h3 {
+  font-size: 39.0625px;
+  font-size: 2.44141rem;
+}
+
+h4 {
+  font-size: 31.25px;
+  font-size: 1.95313rem;
+}
+
+h5 {
+  font-size: 25px;
+  font-size: 1.5625rem;
+}
+
+h6 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+body {
+  background: #fafafa;
+  color: #313032;
+}
