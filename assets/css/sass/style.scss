@@ -30,3 +30,27 @@ body {
   background: $base;
   color: $text;
 }
+
+
+///////////////////////////////////////
+// Print Styles
+///////////////////////////////////////
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

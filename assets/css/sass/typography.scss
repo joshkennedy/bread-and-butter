@@ -43,10 +43,18 @@ $type-margin-bottom: $font-size * $squared;
   }
 }
 
+// Let's set some global styles
 body {
   font: normal 100%/1.4 Georgia, "Times New Roman", serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+}
+
+// Ensure body copy, input and button text all render the same
+body,
+input,
+button {
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -62,13 +70,66 @@ a {
 p {
   font-size: $font-size-px;
   font-size: $font-size;
+  word-break: break-all;
+  word-break: break-word;
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
           hyphens: auto;
 }
 
-strong { font-weight: bold; }
-em { font-style: italic; }
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+u, ins { text-decoration: underline; }
+s, strike, del { text-decoration: line-through; }
+
+code, tt, pre,
+kbd, var, samp {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", monospace;
+}
+code, samp, kbd {
+  text-align: left;
+  color: $text;
+  background: darken($base, 10%);
+}
+pre code {
+  line-height: $line-height;
+  font-size: $font-size-px;
+  font-size: $font-size;
+}
+pre {
+  padding: $font-size;
+  margin: $type-margin-bottom 0;
+  overflow: auto;
+  width: 93%;
+  background: darken($base, 10%);
+}
+// Target IE6 & IE7
+*:first-child+html pre {
+  padding-bottom: $type-margin-bottom;
+  overflow-y: hidden;
+  overflow: visible;
+  overflow-x: auto; 
+}
+* html pre { 
+  padding-bottom: $type-margin-bottom;
+  overflow: visible;
+  overflow-x: auto;
+}
+
+small { font-size: $font-size-px * .85; font-size: $font-size * .85; }
+big { font-size: $font-size-px * 1.2; font-size: $font-size * 1.2; }
+sup { font-size: $font-size-px / 2; vertical-align: super; } 
+sub { font-size: $font-size-px / 2; vertical-align: sub; }
+
+hr { margin: ($type-margin-bottom * 2) 0}
+
+blockquote {
+  text-align: center;
+  font-weight: bold;
+  width: 60%;
+  margin: 0 auto $type-margin-bottom;
+  padding: $type-margin-bottom 0;
+}
 
 p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: $type-margin-bottom;
