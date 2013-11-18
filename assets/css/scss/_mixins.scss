@@ -11,12 +11,23 @@
   -webkit-backface-visibility: hidden;
 }
 
-// Animations
-@mixin animation($properties) {
-  -webkit-animation: $properties;
-     -moz-animation: $properties;
-       -o-animation: $properties;
-          animation: $properties;
+//
+//  Animations
+//  @include animation(10s, 5s, fadeInDown);
+//
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: both;
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: both;
 }
 
 // Border Radius
@@ -96,5 +107,17 @@
   }
   &:after {
     clear: both;
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == full {
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 1023px) { @content; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 480px)  { @content; }
   }
 }

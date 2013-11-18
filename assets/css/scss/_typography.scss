@@ -1,0 +1,198 @@
+///////////////////////////////////////
+// Typography
+///////////////////////////////////////
+
+$serif: Georgia, "Times New Roman", serif;
+$sans-serif: Helvetica, Arial, Verdana, sans-serif;
+$type-ratio: 1.45;
+$font-size: 1.3125rem; // 21px
+$font-size-px: 21px;
+$line-height: $type-ratio;
+$type-margin-bottom: $font-size * $type-ratio;
+
+// Let's set some global styles
+body {
+  font: normal 100%/1.4 $serif;
+  color: $text;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+// Ensure body copy, input and button text all render the same
+body, input, button {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $gray;
+  text-decoration: none;
+  @include transition(color 200ms ease-in);
+  &:hover {
+    color: darken($gray-dark, 10%);
+    @include transition(color 200ms ease-out);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: bold 100%/1.4 $sans-serif;
+}
+h1 {
+  font-size: $font-size-px * 2;
+  font-size: $font-size * 2;
+}
+h2 {
+  font-size: $font-size-px * 1.5;
+  font-size: $font-size * 1.5;
+}
+h3 {
+  font-size: $font-size-px * 1.17;
+  font-size: $font-size * 1.17;
+}
+h4 {
+  font-size: $font-size-px;
+  font-size: $font-size;
+}
+h5 {
+  font-size: $font-size-px * .83;
+  font-size: $font-size * .83;
+}
+h6 {
+  font-size: $font-size-px * .75;
+  font-size: $font-size * .75;
+}
+
+p {
+  font-size: $font-size-px;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin-bottom: $gutter;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+b, strong { 
+  font-weight: bold;
+}
+i, em {
+  font-style: italic;
+}
+u, ins {
+  text-decoration: underline;
+}
+s, strike, del {
+  text-decoration: line-through;
+}
+
+code, tt, pre,
+kbd, var, samp {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", monospace;
+}
+code, samp, kbd {
+  text-align: left;
+  color: $text;
+  background: darken($base, 5%);
+}
+pre code {
+  line-height: $line-height;
+  font-size: $font-size-px;
+  font-size: $font-size;
+}
+pre {
+  padding: $font-size;
+  margin: $type-margin-bottom 0;
+  overflow: auto;
+  width: 93%;
+  background: darken($base, 5%);
+}
+// Target IE6 & IE7
+*:first-child+html pre {
+  padding-bottom: $type-margin-bottom;
+  overflow-y: hidden;
+  overflow: visible;
+  overflow-x: auto; 
+}
+* html pre { 
+  padding-bottom: $type-margin-bottom;
+  overflow: visible;
+  overflow-x: auto;
+}
+
+small {
+  font-size: $font-size-px * .85;
+  font-size: $font-size * .85;
+}
+big {
+  font-size: $font-size-px * 1.2;
+  font-size: $font-size * 1.2;
+}
+sup {
+  font-size: $font-size-px / 2;
+  vertical-align: super;
+}
+sub {
+  font-size: $font-size-px / 2;
+  vertical-align: sub;
+}
+
+hr {
+  margin: ($type-margin-bottom * 2) 0
+}
+
+blockquote {
+  text-align: center;
+  font-weight: bold;
+  width: 60%;
+  margin: 0 auto $type-margin-bottom;
+  padding: $type-margin-bottom 0;
+}
+
+// 
+// Home Page
+//
+header {
+  color: $gray;
+  line-height: 120px;
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  nav ul li {
+    text-align: right;
+  }
+}
+.intro {
+  > article {
+    text-align: center;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: $gutter;
+  }
+  p {
+    color: darken($gray, 5%);
+    a { color: $gray-dark; }
+  }
+}
+footer {
+  text-align: center;
+  padding-bottom: $gutter * 4;
+  .available {
+    color: #73A945;
+  }
+  .unavailable {
+    color: #D83500;
+    text-decoration: line-through;
+  }
+  .contact {
+    color: $gray;
+  }
+  .social {
+    a {
+      padding: 0 5%;
+    }
+  }
+}

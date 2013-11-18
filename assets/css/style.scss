@@ -2,24 +2,24 @@
 // Colors
 ///////////////////////////////////////
 
-  $base:              #FAFAFA;
-  $text:              #313032;
+  $base:              #FFFFFF;
+  $text:              #5E5E66;
   $primary:           #16A8CC;
   $primary-dark:      mix($primary, black, 80%);
   $primary-light:     mix($primary, white, 80%);
   $secondary:         #de555a;
   $secondary-dark:    mix($secondary, black, 85%);
   $secondary-light:   mix($secondary, white, 85%);
-  $gray:              #D9D9DC;
+  $gray:              #ADABA8;
   $gray-dark:         mix($gray, black, 85%);
-  $gray-light:        mix($gray, white, 85%);
+  $gray-light:        #EEE;
 
 
 ///////////////////////////////////////
 // Imports
 ///////////////////////////////////////
 
-@import "reset", "layout", "mixins", "typography";
+@import "scss/mixins", "scss/reset", "scss/grid", "scss/typography", "scss/layout", "scss/animate";
 
 
 ///////////////////////////////////////
@@ -28,9 +28,15 @@
 
 body {
   background: $base;
-  color: $text;
+  max-width: 1600px;
+  margin: 0 auto;
+  //padding: 0 20px;
 }
 
+///////////////////////////////////////
+// Media Queries
+///////////////////////////////////////
+@import "scss/media-queries";
 
 ///////////////////////////////////////
 // Print Styles
