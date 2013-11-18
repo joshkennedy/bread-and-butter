@@ -1,0 +1,43 @@
+///////////////////////////////////////
+// Buttons
+///////////////////////////////////////
+
+// Usage:
+//   .button {
+//     @extend %primary;
+//   }
+
+// Button Base Styles
+%button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  @include border-radius(4px);
+  padding: $font-size/2 $font-size*2;
+}
+
+// Mixins
+@mixin button-theme($button-color, $button-text) {
+  color: $button-text;
+  background-color: $button-color;
+  @include transition(background 200ms ease-in);
+  &:hover {
+    color: $button-text;
+    background-color: mix($button-color, black, 90%);
+    @include transition(background 200ms ease-out);
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  @extend %button;
+}
+
+// Themes
+%primary {
+  @include button-theme($primary, white);
+}
+%inverse {
+  @include button-theme(white, $primary);
+}

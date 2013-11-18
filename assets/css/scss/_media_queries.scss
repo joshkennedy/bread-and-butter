@@ -1,13 +1,14 @@
-// 1600 px
-@include breakpoint(full) {
+// Desktop
+@include breakpoint(desktop) {
 
 }
 
+// Tablet
 @include breakpoint(tablet) {
 
 }
 
-// 480 px
+// Mobile
 @include breakpoint(mobile) {
 
 }

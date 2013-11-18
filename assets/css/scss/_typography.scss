@@ -2,14 +2,6 @@
 // Typography
 ///////////////////////////////////////
 
-$serif: Georgia, "Times New Roman", serif;
-$sans-serif: Helvetica, Arial, Verdana, sans-serif;
-$type-ratio: 1.45;
-$font-size: 1.3125rem; // 21px
-$font-size-px: 21px;
-$line-height: $type-ratio;
-$type-margin-bottom: $font-size * $type-ratio;
-
 // Let's set some global styles
 body {
   font: normal 100%/1.4 $serif;
