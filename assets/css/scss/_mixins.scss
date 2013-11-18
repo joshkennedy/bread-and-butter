@@ -13,7 +13,7 @@
 
 //
 //  Animations
-//  @include animation(10s, 5s, fadeInDown);
+//  @include animation(1s, 200ms, fadeInDown);
 //
 @mixin animation ($delay, $duration, $animation) {
     -webkit-animation-delay: $delay;
